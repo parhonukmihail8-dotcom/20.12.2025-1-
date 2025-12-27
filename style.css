@@ -6,16 +6,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 740px;
+    height: 900px;
     overflow: hidden;
     position: relative;
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 .card {
     perspective: 1500px;
     position: absolute;
     left: calc(50% - 175px);
-    top: calc(50%- 250px);
+    top: calc(50% - 250px);
     transition-property: transform;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -78,7 +78,7 @@
 .cart-page-outside {
     border: 10px solid white;
     background-color: brown;
-    background-image: url();
+    background-image: url(https://i.pinimg.com/736x/6c/d4/0c/6cd40c9180f5579f1601c2ca53ded417.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +93,7 @@
 .cart-page-inside,
 .cart-page-bottom {
     background-color: white;
-    background-image: url();
+    background-image: url(https://img.goodfon.ru/wallpaper/nbig/b/48/ukrasheniia-elka-rozhdestvo-novyi-god-christmas-tree-decor-3.webp);
     border: 20px solid white;
     display: flex;
     flex-flow: column;
@@ -105,4 +105,76 @@
     transform: rotateY(-180deg);
     border-right: none !important;
     background-position: 0px 80px;
+}
+.cart-page-bottom {
+    z-index: 1;
+    border-left: none !important;
+    background-position: -22px 80px;
+    font-size: 18px;
+}
+.cart-page-bottom p {
+    line-height: 1.4;
+}
+.new-year {
+    transform: rotate(-10deg);
+}
+.new-year img {
+    width: 300px;
+    height: auto;
+}
+@media (max-width: 767px) {
+    .card-container {
+        width: 500px;
+    }
+    .card {
+        left: calc(50% - 115px);
+        top: calc(50% - 164.5px);
+    }
+    .card.is-opened {
+        transform: rotate(0deg) translate(115px, 0);
+    }
+    .card,
+    .card-page {
+        width: 230px;
+        height: 329px;
+    }
+    .cart-page-inside {
+        background-position: 0px 30px;
+    }
+    .cart-page-bottom {
+        background-position: 85px 30px;
+        font-size: 11x;
+    }
+    .new-year img {
+        width: 180px;
+    }
+}
+@media (max-width: 479px) {
+    .card-container {
+        width: 300px;
+    }
+    .card {
+        left: calc(50% - 75px);
+        top: calc(50% - 107px);
+    }
+    .card.is-opened {
+        transform: rotate(0deg) translate(75px, 0);
+    }
+    .card,
+    .card-page {
+        width: 150px;
+        height: 214px;
+    }
+    .cart-page-inside {
+        background-position: 0px 30px;
+    }
+    .cart-page-bottom p {
+        line-height: 1;
+    }
+    .cart-page-bottom {
+        background-position: 0px ;
+    }
+    .new-year img {
+        width: 180px;
+    }
 }
